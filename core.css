@@ -1,0 +1,205 @@
+/* ==========================================================================
+   Apple Design System (Life OS & NIIU Labs)
+   Core Design Tokens & Component Styles
+   ========================================================================== */
+
+:root {
+  /* --- Superficies y Fondos (Light Mode) --- */
+  --bg-app: #F5F5F7;
+  --bg-surface: #FFFFFF;
+  --bg-surface-secondary: #EBEBED;
+  --bg-surface-tertiary: #E3E3E8;
+  --bg-glass: rgba(255, 255, 255, 0.78);
+
+  /* --- Textos y Jerarquía --- */
+  --text-primary: #1D1D1F;
+  --text-secondary: #86868B;
+  --text-tertiary: #A1A1A6;
+
+  /* --- Acentos y Semántica de Sistema Apple --- */
+  --accent-primary: #0071E3;
+  --accent-primary-hover: #0077ED;
+  --accent-success: #34C759;
+  --accent-warning: #FF9500;
+  --accent-danger: #FF3B30;
+  --accent-purple: #AF52DE;
+
+  /* --- Bordes y Separadores --- */
+  --border-hairline: 1px solid rgba(0, 0, 0, 0.06);
+  --border-subtle: 1px solid rgba(0, 0, 0, 0.1);
+
+  /* --- Radios de Curvatura (Squircles) --- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* --- Sombras Apple (Difusión Atmosférica Suave) --- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-modal: 0 20px 40px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.1);
+
+  /* --- Desenfoque / Frosted Glass --- */
+  --blur-glass: blur(20px) saturate(180%);
+
+  /* --- Tipografía --- */
+  --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --transition-smooth: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset Básico */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Componentes Reutilizables --- */
+
+/* 1. Header / Navbar Flotante Glass */
+.apple-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-glass);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border-bottom: var(--border-hairline);
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apple-navbar-title {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* 2. Contenedor Principal */
+.apple-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* 3. Tarjeta Estándar (Card) */
+.apple-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: var(--border-hairline);
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+  transition: var(--transition-smooth);
+}
+
+.apple-card-interactive:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.apple-card-interactive:active {
+  transform: scale(0.99);
+}
+
+/* 4. Botones */
+.apple-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.apple-btn-primary {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+}
+
+.apple-btn-primary:hover {
+  background: var(--accent-primary-hover);
+}
+
+.apple-btn-primary:active {
+  transform: scale(0.97);
+  filter: brightness(0.95);
+}
+
+.apple-btn-secondary {
+  background: var(--bg-surface-secondary);
+  color: var(--text-primary);
+}
+
+.apple-btn-secondary:hover {
+  background: var(--bg-surface-tertiary);
+}
+
+.apple-btn-secondary:active {
+  transform: scale(0.97);
+}
+
+/* 5. Inputs y Formularios */
+.apple-input {
+  width: 100%;
+  background: var(--bg-surface-secondary);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: 16px; /* Evita zoom automático en iOS Safari */
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.apple-input:focus {
+  background: var(--bg-surface);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+}
+
+.apple-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* 6. Badges / Píldoras */
+.apple-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.apple-badge-blue {
+  background: rgba(0, 113, 227, 0.1);
+  color: var(--accent-primary);
+}
+
+.apple-badge-green {
+  background: rgba(52, 199, 89, 0.12);
+  color: var(--accent-success);
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Apple Design System • Life OS & NIIU Labs</title>
+  <link rel="stylesheet" href="core.css">
+  <style>
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .demo-section {
+      margin-bottom: 40px;
+    }
+    .demo-title {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .demo-desc {
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    .color-swatch {
+      height: 48px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      color: white;
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra Superior Flotante Glass -->
+  <header class="apple-navbar">
+    <div class="apple-navbar-title">🍎 Design System</div>
+    <div>
+      <span class="apple-badge apple-badge-green">v1.0 Activo</span>
+    </div>
+  </header>
+
+  <main class="apple-container">
+
+    <!-- Introducción -->
+    <section class="demo-section">
+      <h1 class="demo-title">Estilo Apple: Limpio, Blanco y Minimalista</h1>
+      <p class="demo-desc">
+        Repositorio central de componentes y tokens de diseño para las aplicaciones personales (Life OS) y profesionales (NIIU Labs).
+      </p>
+    </section>
+
+    <!-- Demostración de Tarjetas y Botones -->
+    <section class="demo-section">
+      <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 16px;">Componentes Base</h2>
+      <div class="demo-grid">
+        
+        <!-- Tarjeta 1: Botones e Interacción -->
+        <div class="apple-card apple-card-interactive">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <h3 style="font-size: 17px; font-weight: 600;">Pulsadores y Acciones</h3>
+            <span class="apple-badge apple-badge-blue">Botones</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 20px;">
+            Efectos hápticos suaves con micro-escala al presionar.
+          </p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="apple-btn apple-btn-primary">Primario</button>
+            <button class="apple-btn apple-btn-secondary">Secundario</button>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Formulario -->
+        <div class="apple-card apple-card-interactive">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <h3 style="font-size: 17px; font-weight: 600;">Campos de Entrada</h3>
+            <span class="apple-badge apple-badge-blue">Form</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 16px;">
+            Inputs limpios sin bordes toscos, con anillo de foco Apple.
+          </p>
+          <input type="text" class="apple-input" placeholder="Escribe aquí...">
+        </div>
+
+        <!-- Tarjeta 3: Colores del Sistema -->
+        <div class="apple-card apple-card-interactive">
+          <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 16px;">Paleta de Acentos</h3>
+          <div class="color-swatch" style="background: var(--accent-primary);">System Blue (#0071E3)</div>
+          <div class="color-swatch" style="background: var(--accent-success);">System Green (#34C759)</div>
+          <div class="color-swatch" style="background: var(--accent-warning);">System Orange (#FF9500)</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
