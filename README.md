@@ -1,6 +1,6 @@
-# 🍎 Apple Design System (Life OS & NIIU Labs)
+# 🍎 NIIU Labs Design System for Apps Ecosystem
 
-Sistema de diseño centralizado con estética Apple (limpio, blanco, minimalista) para todas las aplicaciones web personales y profesionales.
+Sistema de diseño centralizado con estética Apple (limpio, blanco y minimalista) para todo el ecosistema de aplicaciones (personales, herramientas internas y soluciones para clientes).
 
 ---
 
