@@ -66,10 +66,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- Componentes Reutilizables --- */
+/* --- Componentes Reutilizables (.niiu-) --- */
 
 /* 1. Header / Navbar Flotante Glass */
-.apple-navbar {
+.niiu-navbar, .apple-navbar {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -83,21 +83,21 @@ body {
   align-items: center;
 }
 
-.apple-navbar-title {
+.niiu-navbar-title, .apple-navbar-title {
   font-size: 17px;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
 /* 2. Contenedor Principal */
-.apple-container {
+.niiu-container, .apple-container {
   max-width: 980px;
   margin: 0 auto;
   padding: 24px 16px;
 }
 
 /* 3. Tarjeta Estándar (Card) */
-.apple-card {
+.niiu-card, .apple-card {
   background: var(--bg-surface);
   border-radius: var(--radius-lg);
   border: var(--border-hairline);
@@ -106,17 +106,21 @@ body {
   transition: var(--transition-smooth);
 }
 
-.apple-card-interactive:hover {
+.niiu-card-interactive, .apple-card-interactive {
+  transition: var(--transition-smooth);
+}
+
+.niiu-card-interactive:hover, .apple-card-interactive:hover {
   box-shadow: var(--shadow-card-hover);
   transform: translateY(-1px);
 }
 
-.apple-card-interactive:active {
+.niiu-card-interactive:active, .apple-card-interactive:active {
   transform: scale(0.99);
 }
 
 /* 4. Botones */
-.apple-btn {
+.niiu-btn, .apple-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -132,35 +136,35 @@ body {
   transition: var(--transition-smooth);
 }
 
-.apple-btn-primary {
+.niiu-btn-primary, .apple-btn-primary {
   background: var(--accent-primary);
   color: #FFFFFF;
 }
 
-.apple-btn-primary:hover {
+.niiu-btn-primary:hover, .apple-btn-primary:hover {
   background: var(--accent-primary-hover);
 }
 
-.apple-btn-primary:active {
+.niiu-btn-primary:active, .apple-btn-primary:active {
   transform: scale(0.97);
   filter: brightness(0.95);
 }
 
-.apple-btn-secondary {
+.niiu-btn-secondary, .apple-btn-secondary {
   background: var(--bg-surface-secondary);
   color: var(--text-primary);
 }
 
-.apple-btn-secondary:hover {
+.niiu-btn-secondary:hover, .apple-btn-secondary:hover {
   background: var(--bg-surface-tertiary);
 }
 
-.apple-btn-secondary:active {
+.niiu-btn-secondary:active, .apple-btn-secondary:active {
   transform: scale(0.97);
 }
 
 /* 5. Inputs y Formularios */
-.apple-input {
+.niiu-input, .apple-input {
   width: 100%;
   background: var(--bg-surface-secondary);
   border: 1px solid transparent;
@@ -173,18 +177,18 @@ body {
   transition: var(--transition-smooth);
 }
 
-.apple-input:focus {
+.niiu-input:focus, .apple-input:focus {
   background: var(--bg-surface);
   border-color: var(--accent-primary);
   box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
 }
 
-.apple-input::placeholder {
+.niiu-input::placeholder, .apple-input::placeholder {
   color: var(--text-tertiary);
 }
 
 /* 6. Badges / Píldoras */
-.apple-badge {
+.niiu-badge, .apple-badge {
   display: inline-flex;
   align-items: center;
   padding: 4px 10px;
@@ -194,12 +198,12 @@ body {
   letter-spacing: 0.02em;
 }
 
-.apple-badge-blue {
+.niiu-badge-blue, .apple-badge-blue {
   background: rgba(0, 113, 227, 0.1);
   color: var(--accent-primary);
 }
 
-.apple-badge-green {
+.niiu-badge-green, .apple-badge-green {
   background: rgba(52, 199, 89, 0.12);
   color: var(--accent-success);
 }
